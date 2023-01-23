@@ -40,18 +40,10 @@ typedef struct
     int yVelocity;
 } SnakeSegment;
 
-// typedef struct
-// {
-//     u16 tileIndex;
-//     int dirty;
-// } MapData;
-
-
 extern u16 map[];
 extern int mapWidth;
 extern int mapHeight;
 
-// Game state
 int snakeLength;
 SnakeSegment snake[100];
 
