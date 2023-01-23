@@ -1,6 +1,6 @@
-#A cross-platform implementation of the classic game Snake for the Sega Megadrive/Genesis and the Nintendo SNES.
+A cross-platform implementation of the classic game Snake for the Sega Megadrive/Genesis and the Nintendo SNES.
 
-#Getting Started
+##Getting Started
 To build the game, you'll need the following dependencies:
 
 - pvsneslib Docker image built from custom Docker file under https://github.com/tross78/megadrive-snes/docker-pvsneslib
