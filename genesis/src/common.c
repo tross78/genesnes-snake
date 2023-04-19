@@ -87,7 +87,17 @@ void updateSnake()
     for (i = 1; i < snakeLength; i++)
     {
         snake[i].index = snake[i].y * mapWidth + snake[i].x;
-        setMapTile(getIndexFromXY(snake[i].x, snake[i].y), 2);
+        setMapTile(getIndexFromXY(snake[i].x, snake[i].y), 1);
+    }
+}
+
+
+// Function to init and draw the map
+void drawMap()
+{
+    for (i = 0; i < MAP_LENGTH; i++)
+    {
+        drawMapTile((u16)i);
     }
 }
 
@@ -100,7 +110,6 @@ void updateApple()
     {
         // clear old apple spot
         setMapTile(appleIndex, 0);
-
         //  Generate a new apple position
         appleX = generateRandom(mapWidth - 1);
         appleY = generateRandom(mapHeight - 1);
@@ -110,6 +119,8 @@ void updateApple()
         appleIndex = appleY * mapWidth + appleX;
 
         setMapTile(appleIndex, APPLE_TILE);
+
+        doVSync();
         // Reset the apple timer
         appleTimer = 0;
 
@@ -152,15 +163,6 @@ void drawBuffer()
     if (bufferDrawn)
     {
         blitMapToVideoRam();
-    }
-}
-
-// Function to init and draw the map
-void drawMap()
-{
-    for (i = 0; i < MAP_LENGTH; i++)
-    {
-        drawMapTile((u16)i);
     }
 }
 

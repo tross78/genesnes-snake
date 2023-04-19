@@ -19,12 +19,12 @@ typedef unsigned long u32;
 
 
 // Constants
-#define BUFFER_LENGTH 200
+#define BUFFER_LENGTH 32
 #define MAP_LENGTH 1120
 #define SNAKE_START_LENGTH 3
 #define SPEED_MIN 300
-#define SPEED_MAX 10
-#define APPLE_TILE 3
+#define SPEED_MAX 100
+#define APPLE_TILE 2
 
 #define INT_MAX 65535
 

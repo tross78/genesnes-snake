@@ -30,11 +30,11 @@ void initScreen()
     // // Initialize text console with our font
     consoleSetTextVramBGAdr(0x6000);
     consoleSetTextVramAdr(0x3000);
-    consoleInitText(1, 16 * 2 * 3, &snesfont, &snespal);
+    consoleInitText(1, 16 * 2, &snesfont, &snespal);
 
-    for (j = 0; j < 29; j++)
+    for (j = 0; j < mapHeight; j++)
     {
-        for (i = 0; i < 32; i++)
+        for (i = 0; i < mapWidth; i++)
         {
             u16 mapIndex = j*mapWidth+i;
             u16 tileX = mapIndex % mapWidth;
@@ -47,7 +47,7 @@ void initScreen()
     bgSetGfxPtr(1, 0x3000);
     bgSetMapPtr(1, 0x6000, SC_32x32);
 
-    bgInitTileSet(0, &tileset, &tilepal, 1, (&tilesetend - &tileset), 16 * 2 * 3, BG_16COLORS, 0x4000);
+    bgInitTileSet(0, &tileset, &tilepal, 1, (&tilesetend - &tileset), 4, BG_4COLORS, 0x4000);
     // Copy Map to VRAM
     bgInitMapSet(0, (u8 *)blockmap, 0x800, SC_32x32, 0x0000);
 
