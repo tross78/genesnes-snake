@@ -80,11 +80,8 @@ void updateSnake()
         snake[0].y = mapHeight - 1;
     }
 
-    // draw snake head
-    setMapTile(getIndexFromXY(snake[0].x, snake[0].y), 1);
-
-    // Draw the snake body to the map
-    for (i = 1; i < snakeLength; i++)
+    // Draw the snake to the map
+    for (i = 0; i < snakeLength; i++)
     {
         snake[i].index = snake[i].y * mapWidth + snake[i].x;
         setMapTile(getIndexFromXY(snake[i].x, snake[i].y), 1);
@@ -276,7 +273,7 @@ int main()
         drawBuffer();
         drawScore();
 
-        doVSync();
+        //doVSync();
 
         // Read the joypad
         u16 buttonInput = getInput();

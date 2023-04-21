@@ -1,8 +1,7 @@
 rm -rf snes/main.c
 rm -rf snes/common.c
 rm -rf snes/common.h
-rm -rf roms
-mkdir roms
+rm -rf roms/rom.sfc
 cp snes.c snes/main.c
 cp common.c snes/common.c
 cp common.h snes/common.h

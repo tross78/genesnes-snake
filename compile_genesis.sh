@@ -1,6 +1,5 @@
 rm -rf genesis/src
-rm -rf roms
-mkdir roms
+rm -rf roms/rom.md
 mkdir genesis/src
 mkdir genesis/src/boot
 cp genesis.c genesis/src/main.c
