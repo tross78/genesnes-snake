@@ -10,3 +10,5 @@ To build the game, you'll need the following dependencies:
 
 The build system is currently very hacky and the process for building the game for each platform is different. 
 The snes and genesis folders contain code specific to each platform, while the common code is copied to them.
+
+The scripts are currently hardcoded to run the roms with BSNES and DGEN emulators.
